@@ -1,59 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>web 연습</title>
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/slick.css">
-<link rel="stylesheet" href="css/ex2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+    <title></title>
 </head>
 <body>
-	<div id="wrap">
-		<header id="header">
-			<h1 class="logo">LOGO</h1>
-			<nav class="gnb">
-				<ul>
-					<li><a href="#!">menu1</a></li>
-					<li><a href="#!">menu2</a></li>
-					<li><a href="#!">menu3</a></li>
-					<li><a href="#!">menu4</a></li>
-					<li><a href="#!">menu5</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main id="contanier">
-			<div id="mainSlider">
-				<div class="mainSliderw">
-					<figure class="mainvisual01">
-						<h2 class="inner">01.brand name</h2>
-						<p class="inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</figure>
-					<figure class="mainvisual02">
-						<h2 class="inner">02.brand service</h2>
-						<p class="inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</figure>
-					<figure class="mainvisual03">
-						<h2 class="inner">03.brand location</h2>
-						<p class="inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</figure>
-				</div>
-			</div>
-			<div class="cont1">
-				메인
-			</div>
-			<div class="cont2">
-				서브
-			</div>
-			<div class="cont3">
-				털드
-			</div>
-		</main>
-		<footer id="footer">
-			
-		</footer>
+    <div class="section" id="section1">
+        <div id = "section1_detail">
+			휘진님
+        </div>
+    </div>
+	<div class="section" id="section2">
+		<div id="section2_detail">
+		신기한거
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div id="section_detail3">
+		보여드릴까요?
+		</div>
+	</div>
+	<div class="section" id="section4">
+	<div id="section_detail4">
+		슬라이드 입니다
+		</div>
 	</div>
 </body>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/ex2js.js"></script>
+<script>
+	var mHtml = $("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+	$(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 4) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})
+</script>
 </html>
