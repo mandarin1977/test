@@ -4,50 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="js/jquery-lastest.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/defaul.css">
+    <link rel="stylesheet" href="../css/index_01.css">
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-    <div class="section" id="section1">
-        <div id = "section1_detail">
-			휘진님
-        </div>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                L O G O
+            </h1>
+            <nav class="gnb">
+                <button class="mbuton">
+                    <i class="xi-align-right"></i>
+                </button>
+                <ul class="mobile_menu">
+                    <button class="close">
+                        <i class="xi-close"></i>
+                    </button>
+                    <li style="margin-top: 90px">
+                        <a href="/docs/index04.html">shoppingmall</a>
+                    </li>
+                    <li>
+                        <a href="/docs/mypage.html">mypage</a> 
+                    </li>
+                    <li>
+                        <a href="#!">cart</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu04</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu05</a>
+                    </li>
+                    <div class="bg"></div>
+                </ul>
+            </nav>
+            <button class="prevbtn" onClick="history.go(-1)">
+                <i class="xi-angle-left"></i>
+            </button>
+        </header>
     </div>
-	<div class="section" id="section2">
-		<div id="section2_detail">
-		신기한거
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div id="section_detail3">
-		보여드릴까요?
-		</div>
-	</div>
-	<div class="section" id="section4">
-	<div id="section_detail4">
-		슬라이드 입니다
-		</div>
-	</div>
+    <script src="/js/common.js"></script>
 </body>
-<script>
-	var mHtml = $("html");
-var page = 1;
-
-
-mHtml.animate({scrollTop : 0},10);
-	$(window).on("wheel", function(e) {
-    if(mHtml.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == 4) return;
-        page++;
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    mHtml.animate({scrollTop : posTop});
-})
-</script>
 </html>
