@@ -67,7 +67,7 @@ height: 2rem;
 
 }
 .item_wrap>li:nth-child(1){
-    background: url(./img/item01.png)center center/cover;
+    background: url(../img/item01.png)center center/cover;
 }
 .item_wrap>li:nth-child(2){
     background: url(../img/item02.png)center center/cover;
