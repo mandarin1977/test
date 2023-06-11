@@ -1,0 +1,171 @@
+.membership_section{
+    background: #fff;
+    margin-top: 2rem;
+
+}
+
+.memvership_tit{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #515151;
+    margin-bottom: 1rem;
+}
+
+.my_membership{
+    background: #ABA6A6;
+    border-radius: 3rem;
+    padding: 2rem 3rem;
+}
+.my_membership_top{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.my_membership_tit h3{
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 3rem;
+}
+.my_membership_tit p{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 3rem;
+}
+.profile{
+    cursor: pointer;
+}
+.profile a{
+    display: block;
+    text-align: right;
+    cursor: pointer;
+}
+.profile a img{
+    width: 50%;
+    cursor: pointer;
+}
+@media (min-width:425px){
+.my_membership_card{
+    height: 14rem;
+    background: red;
+    padding: 1.5rem!important;
+    position: relative;
+}
+.class_name{
+    font-size: 2rem!important;
+    position: absolute;
+    top:1rem;
+    right: 2rem;
+}
+.point{
+margin-top: 25%;
+transform: translateY(-50%);
+}
+.month{
+    font-size: 1.8rem!important;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+}
+}
+.my_membership_card{
+    background: #EBEBEB;
+    width: 80%;
+    padding: 1.5rem 2.5rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+}
+.class_name{
+    text-align: right;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #898989;
+    font-weight: bold;
+}
+.point{
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #898989;
+    font-weight: bolder;
+}
+.month{
+    font-size: 1.4rem;
+    color: #898989;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.month::after{
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 52px;
+    height: 3px;
+    background: #ABA6A6;
+}
+
+.tabmenu{
+    width: 25rem;
+    justify-content: space-between;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+
+}
+.tabmenu p{
+    cursor: pointer;
+}
+.tabmenu p a{
+    font-size: 1.6rem;
+    color: #898989;
+    font-weight: bold;
+}
+@media (max-width:425px){
+    .history_wrap{
+        height: 40%!important;
+    }
+    .history_wrap.on{
+        height: 100%!important;
+    }
+}
+.history_wrap{
+    background: #FBF8F8;
+    position: absolute;
+    bottom: 0;
+    height: 45%;
+    width: 100%;
+    max-width: 500px;
+    transition: 0.1s ease-in;
+    border-radius: 3rem 3rem 0 0;
+}
+.bottomsit_header{
+    width: 100px;
+    border-radius: 1rem;
+    height: 8px;
+    background: #ABA6A6;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.history_wrap.on{
+    height: 100%;
+    transition: 0.1s ease-in;
+    z-index: 1065;
+}
+.history_tit{
+    font-size: 1.8rem;
+    color: #898989;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.itme_list_wrap{
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+.item_list_point{
+    text-align: right;
+}
