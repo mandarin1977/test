@@ -1,0 +1,18 @@
+$('.mbuton').click(function(){
+    $('.mobile_menu').addClass('on');
+});
+$('.close').click(function(){
+    $('.mobile_menu').removeClass('on');
+});
+$('.bg').click(function(){
+    $('.mobile_menu').removeClass('on');
+});
+$('.bottomsit_header').click(function(){
+    $('.history_wrap').toggleClass('on');
+})
+$('.bottomsit_header').click(function(){
+    $('.bottom_sit').toggleClass('on');
+})
+$('.bottomsit_header').click(function(){
+    $('.styleing_box').toggleClass('on');
+})
