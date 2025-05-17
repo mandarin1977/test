@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* sub css */
+/* mypage */
+#mypage_content.mypage_content{max-width: 60rem;height: auto;width: 100%;margin: 0 auto;}
+#mypage_content.mypage_content header{margin-bottom: 4.6rem;}
+#mypage_content.mypage_content header h2{font-size: 2.5rem;line-height: 3rem;letter-spacing: -3%;text-align: center;font-weight:bold;color: var(--color001);}
+#mypage_user_wr.mypage_user_wr{width: 100%;height: auto;}
+.mypage_box{border: .1rem solid #EEEEEE;padding: 3.8rem 2.5rem;border-radius: 2rem;}
+.mypage_box.user_info{margin-bottom: 1.6rem;display: flex;flex-wrap: wrap;position: relative;}
+.mypage_box h5{color: var(--color001);font-size: 1.6rem;line-height: 1.3rem;letter-spacing: -3%;font-weight: bold;margin-bottom: 1.6rem;}
+.mypage_box.user_info h5{width: 100%;}
+.mypage_box.user_info dl{display: flex;flex-wrap: wrap;align-items: center;gap: 2.9rem;width: 100%;row-gap: .8rem;}
+.mypage_box.user_info dl.user_id{margin-bottom: .8rem;}
+.mypage_box.user_info dl dt{min-width: 6.8rem;line-height: 2.4rem;}
+.mypage_box.user_info button{position: absolute;width: 4.4rem;height: 2.4rem;border: .1rem solid #ddd;border-radius: .3rem;right: 2.5rem;bottom: 3.8rem;background-color: unset;color: #666;font-size: 1.4rem;}
+
+.history_list_wr{display: grid;row-gap: 1.6rem;}
+.history_list_wr::after{display: block;content: "※ 이용내역은 90일까지 보관됩니다.";color: #999;margin-bottom: 2.5rem;text-align: right;}
+.history_list{display: flex;flex-wrap: wrap;justify-content: space-between;}
+.receipt{background-color: unset;border: .1rem solid #ddd;width: 5.6rem;height: 2.4rem;font-size: 1.4rem;line-height: 1.4rem;color: #666;border-radius: .3rem;margin-top: auto;}
+.history_info_wr{display: flex;flex-wrap: nowrap;}
+
+
+
+/* mypage */
