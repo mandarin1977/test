@@ -1,0 +1,13 @@
+이 폴더에 다음 사운드 파일들을 넣어주세요:
+
+- click.mp3 (클릭 사운드)
+- coin.mp3 (코인 획득)
+- purchase.mp3 (구매 사운드)
+- levelUp.mp3 (레벨업)
+- roulette.mp3 (룰렛 스핀)
+- win.mp3 (승리)
+- lose.mp3 (실패)
+- notification.mp3 (알림)
+- button.mp3 (버튼 클릭)
+
+사운드 파일을 넣은 후 이 파일은 삭제해도 됩니다.

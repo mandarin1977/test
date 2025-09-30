@@ -1,0 +1,198 @@
+/* 기존 스타일은 동일하게 유지됩니다. */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-user-select: none; 
+    user-select: none;
+}
+
+.main-container {
+    display: flex; 
+    flex-direction: column; 
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+    z-index: 1000;
+}
+
+@keyframes click-pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); 
+    }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.7); 
+    }
+}
+
+.click-button-animation { 
+    animation: click-pulse 1.5s infinite ease-in-out; 
+}
+
+.click-button-feedback { 
+    transform: scale(0.95); 
+    transition: transform 0.1s ease-in-out; 
+}
+
+@keyframes float-up {
+    to { 
+        transform: translateY(-80px) scale(0.8); 
+        opacity: 0; 
+    }
+}
+
+.floating-number {
+    position: absolute; 
+    pointer-events: none; 
+    animation: float-up 1.2s ease-out forwards;
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: #f0f9ff;
+    text-shadow: 0 2px 10px rgba(56, 189, 248, 0.8); 
+    z-index: 20;
+}
+
+@keyframes fall-down {
+    to { 
+        transform: translateY(100vh) rotateZ(360deg); 
+        opacity: 0; 
+    }
+}
+
+.combo-particle {
+    position: absolute; 
+    top: 0; 
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%; 
+    pointer-events: none; 
+    animation-name: fall-down; 
+    animation-timing-function: linear;
+}
+
+.ripple {
+    position: absolute; 
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 60%);
+    transform: translate(-50%, -50%) scale(0); 
+    animation: ripple-effect 0.7s ease-out; 
+    pointer-events: none;
+    width: 150px; 
+    height: 150px;
+}
+
+@keyframes ripple-effect {
+    to { 
+        transform: translate(-50%, -50%) scale(3); 
+        opacity: 0; 
+    }
+}
+
+.speech-bubble {
+    position: absolute; 
+    padding: 6px 12px; 
+    background-color: #374151;
+    border-radius: 10px; 
+    color: white; 
+    font-size: 0.9rem;
+    pointer-events: none; 
+    z-index: 30; 
+    animation: pop-and-fade 1.5s ease-out forwards;
+}
+
+.speech-bubble::after {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: -8px;
+    transform: translateY(-50%); 
+    width: 0; 
+    height: 0;
+    border-top: 8px solid transparent; 
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #374151;
+}
+
+@keyframes pop-and-fade {
+    0% { 
+        transform: scale(0.5) translateY(0); 
+        opacity: 0; 
+    }
+    20% { 
+        transform: scale(1) translateY(-10px); 
+        opacity: 1; 
+    }
+    80% { 
+        transform: scale(1) translateY(-20px); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: scale(0.8) translateY(-30px); 
+        opacity: 0; 
+    }
+}
+
+.roulette-container {
+    position: relative; 
+    width: 320px; 
+    height: 320px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.roulette-wheel {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%;
+    position: relative; 
+    overflow: hidden; 
+    border: 8px solid #4b5563;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); 
+    transition: transform 5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.roulette-pointer {
+    position: absolute; 
+    top: -5px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent; 
+    border-top: 30px solid #f59e0b; 
+    z-index: 10;
+}
+
+.roulette-center {
+    position: absolute; 
+    width: 60px; 
+    height: 60px; 
+    background: #374151;
+    border-radius: 50%; 
+    border: 5px solid #6b7280; 
+    z-index: 5;
+}
+
+.roulette-label {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform-origin: 0 0;
+    color: white; 
+    font-weight: bold; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.toggle-checkbox:checked { 
+    right: 0; 
+    border-color: #4ade80; 
+}
+
+.toggle-checkbox:checked + .toggle-label { 
+    background-color: #4ade80; 
+}
